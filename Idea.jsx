@@ -1,8 +1,12 @@
 Idea = React.createClass({
+  getInitialState: function() {
+    return {count: 3};
+  },
   vote() {
-    console.log('index')
+    this.setState({count: this.state.count + 1});
   },
   render() {
+    console.log(this.state.count)
     return (
       <div>
         <p>who</p>
@@ -10,7 +14,8 @@ Idea = React.createClass({
         <p>who</p>
         <button onClick={this.vote}>Good!</button>
         <button>Bad!</button>
-        <Pie yes='1' no='2' />
+        <p>{this.state.count}</p>
+        <Pie yes={this.state.count} no='1' />
       </div>
     )
   },
