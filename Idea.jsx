@@ -22,8 +22,8 @@ Idea = React.createClass({
         <br />
         <p>Q.このアイディア、どうおもいますか？</p>
 
-        <RaisedButton onClick={this.vote_yes} label="いいね" secondary={true} />
-        <RaisedButton onClick={this.vote_no} label="わるいね" primary={true} />
+        <button onClick={this.vote_yes} class='btn btn-primary' >いいね！</button>
+        <button onClick={this.vote_no} class='btn btn-danger' >わるいね！</button>
 
         <Pie yes={this.state.yes_cnt} no={this.state.no_cnt} />
         <h3><small>いいね！といった人:</small>{this.state.yes_cnt}<small>人</small></h3>
