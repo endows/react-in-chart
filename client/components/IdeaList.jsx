@@ -1,8 +1,15 @@
+var { Card,CardHeader } = MUI;
+
 IdeaList = React.createClass({
   render() {
     return (
       <div>
-        <h1>This is idealist</h1>
+        <Card>
+          <CardHeader
+            title="Title"
+            subtitle="Subtitle"
+          />
+        </Card>
       </div>
     )
   }
