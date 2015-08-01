@@ -11,16 +11,23 @@ Idea = React.createClass({
   render() {
     return (
       <div>
-        <h1>プログラミングを勉強中の人</h1>
-        <span>の、</span>
-        <h1>モチベが沸かない</h1>
-        <span>問題を</span>
-        <h1>美少女で</h1>
-        <span>解決するアイディア</span>
+        <h1>プログラミングを勉強中の人<small>の、</small></h1>
+
+        <h1>モチベが沸かない<small>問題を</small></h1>
+
+        <h1>美少女で<small>解決するアイディア</small></h1>
+
+        <br />
+        <br />
+        <br />
+        <p>Q.このアイディア、どうおもいますか？</p>
+
         <RaisedButton onClick={this.vote_yes} label="いいね" secondary={true} />
         <RaisedButton onClick={this.vote_no} label="わるいね" primary={true} />
 
         <Pie yes={this.state.yes_cnt} no={this.state.no_cnt} />
+        <h3><small>いいね！といった人:</small>{this.state.yes_cnt}<small>人</small></h3>
+        <h3><small>わるいね！といった人:</small>{this.state.no_cnt}<small>人</small></h3>
       </div>
     )
   },
