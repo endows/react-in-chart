@@ -6,7 +6,7 @@ Pie = React.createClass({
     return true
   },
   render() {
-    return (<div><p>Pie.jsx:no:{this.props.no}</p><canvas height="500" id="sample" width="500"></canvas></div>)
+    return (<div><canvas height="500" id="sample" width="500"></canvas></div>)
   },
   componentDidMount() {
     var doughnutData = [
