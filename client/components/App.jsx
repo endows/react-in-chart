@@ -1,7 +1,7 @@
 var ThemeManager = new MUI.Styles.ThemeManager();
 injectTapEventPlugin();
 
-var { Card,CardHeader,AppBar } = MUI;
+var { Card,CardHeader,AppBar,FontIcon } = MUI;
 
 Post = new Mongo.Collection('posts')
 
@@ -19,7 +19,6 @@ var App = React.createClass({
           muiTheme: ThemeManager.getCurrentTheme()
       };
   },
-
   render() {
     return (
         <div>

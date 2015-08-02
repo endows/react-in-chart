@@ -1,4 +1,4 @@
-var { FloatingActionButton,ToggleStar,Dialog,FlatButton,TextField } = MUI;
+var { FloatingActionButton,ToggleStar,Dialog,FlatButton,TextField,FontIcon,IconButton } = MUI;
 
 IdeaForm = React.createClass({
   getInitialState: function() {
@@ -27,7 +27,10 @@ IdeaForm = React.createClass({
     ];
     return (
         <div>
-          <FloatingActionButton onClick={this._show}/>
+          <FloatingActionButton onClick={this._show}>
+            <FontIcon className="material-icons">add</FontIcon>
+          </FloatingActionButton>
+
           <p>{this.state.userInput}</p>
           <Dialog
             title="アイディア作成"
