@@ -9,10 +9,13 @@ IdeaList = React.createClass({
       <div>
         {this.props.posts.map(function (p,i) {
           let title = `${p.who}の、${p.what}を、${p.keyword}で解決するアイディア`
+          let link = `/idea/${p._id}`
           return(
-            <Card>
-              <CardHeader subtitle="Subtitle" title={title}/>
-            </Card>
+            <a href={link}>
+              <Card>
+                <CardHeader subtitle="Subtitle" title={title}/>
+              </Card>
+            </a>
           )
         })}
       </div>
