@@ -3,7 +3,13 @@ injectTapEventPlugin();
 
 var { Card,CardHeader,AppBar } = MUI;
 
+
+
 var App = React.createClass({
+  mixins: [ReactMeteorData],
+  getMeteorData() {
+    return {posts: Post.find().fetch()};
+  },
   childContextTypes: {
       muiTheme: React.PropTypes.object
   },
@@ -15,12 +21,13 @@ var App = React.createClass({
   },
 
   render() {
+    console.log(this.data.posts)
     return (
         <div>
           <AppBar
             title="iSeed"
             iconClassNameRight="muidocs-icon-navigation-expand-more" />
-            <IdeaList/>
+            <IdeaList posts={this.data.posts}/>
             <IdeaForm/>
         </div>
     );
