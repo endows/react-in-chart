@@ -14,7 +14,6 @@ var App = React.createClass({
   childContextTypes: {
       muiTheme: React.PropTypes.object
   },
-
   getChildContext: function() {
       return {
           muiTheme: ThemeManager.getCurrentTheme()
