@@ -31,9 +31,14 @@ var App = React.createClass({
     );
   }
 });
+FlowRouter.route('/', {
+    action: function(params, queryParams) {
+      React.render(<App />, document.body);
+    }
+});
 
-Meteor.startup(function () {
-  if (Meteor.isClient) {
-    React.render(<App />, document.body);
-  }
+FlowRouter.route('/idea/:_id', {
+    action: function(params, queryParams) {
+      React.render(<Idea />, document.body);
+    }
 });

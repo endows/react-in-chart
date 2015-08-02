@@ -12,3 +12,4 @@ twbs:bootstrap
 endotakashi:material-ui
 react-meteor-data
 ixdi:material-design-iconic-font
+kadira:flow-router

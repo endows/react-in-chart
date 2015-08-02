@@ -30,7 +30,5 @@ Idea = React.createClass({
         <h3><small>わるいね！といった人:</small>{this.state.no_cnt}<small>人</small></h3>
       </div>
     )
-  },
-  componentDidMount() {
   }
 });
