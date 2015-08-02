@@ -3,6 +3,7 @@ injectTapEventPlugin();
 
 var { Card,CardHeader,AppBar } = MUI;
 
+Post = new Mongo.Collection('posts')
 
 
 var App = React.createClass({
@@ -21,7 +22,6 @@ var App = React.createClass({
   },
 
   render() {
-    console.log(this.data.posts)
     return (
         <div>
           <AppBar
