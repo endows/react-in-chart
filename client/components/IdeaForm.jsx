@@ -30,8 +30,6 @@ IdeaForm = React.createClass({
           <FloatingActionButton onClick={this._show}>
             <FontIcon className="material-icons">add</FontIcon>
           </FloatingActionButton>
-
-          <p>{this.state.userInput}</p>
           <Dialog
             title="アイディア作成"
             actions={standardActions}
