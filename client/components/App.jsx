@@ -67,8 +67,15 @@ FlowRouter.route('/', {
     }
 });
 
+postObj = {
+  who:'ano',
+  what:'kono',
+  how:'sono',
+  keyword:'sono',
+}
+
 FlowRouter.route('/idea/:_id', {
     action: function(params, queryParams) {
-      React.render(<Idea />, document.body);
+      React.render(<Idea post={postObj}/>, document.body);
     }
 });

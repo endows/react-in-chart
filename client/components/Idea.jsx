@@ -23,11 +23,11 @@ Idea = React.createClass({
   render() {
     return (
       <div>
-        <h1>プログラミングを勉強中の人<small>の、</small></h1>
+        <h1>{this.props.post.who}<small>の、</small></h1>
 
-        <h1>モチベが沸かない<small>問題を</small></h1>
+        <h1>{this.props.post.what}<small>問題を</small></h1>
 
-        <h1>美少女で<small>解決するアイディア</small></h1>
+        <h1>{this.props.post.keyword}<small>解決するアイディア</small></h1>
 
         <br />
         <br />
