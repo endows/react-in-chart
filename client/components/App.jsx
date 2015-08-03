@@ -76,6 +76,7 @@ postObj = {
 
 FlowRouter.route('/idea/:_id', {
     action: function(params, queryParams) {
+      postObj._id = params._id
       React.render(<Idea post={postObj}/>, document.body);
     }
 });

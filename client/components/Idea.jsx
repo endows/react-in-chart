@@ -15,10 +15,16 @@ Idea = React.createClass({
     return {yes_cnt: 1,no_cnt:1};
   },
   vote_yes() {
-    this.setState({yes_cnt: this.state.yes_cnt + 1});
+    if(localStorage[this.props.post._id] != 'voted'){
+      this.setState({yes_cnt: this.state.yes_cnt + 1});
+      localStorage[this.props.post._id] = 'voted'
+    }
   },
   vote_no() {
-    this.setState({no_cnt: this.state.no_cnt + 1});
+    if(localStorage[this.props.post._id] != 'voted'){
+      this.setState({no_cnt: this.state.no_cnt + 1});
+      localStorage[this.props.post._id] = 'voted'
+    }
   },
   render() {
     return (
